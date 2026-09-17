@@ -70,7 +70,7 @@ int main() {
     enqueue(50, 3);
 
     display();
-
+    
     cout << endl;
     Node d;
     d = dequeue();
