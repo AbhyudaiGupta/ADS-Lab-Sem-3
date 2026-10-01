@@ -151,6 +151,7 @@ int main()
 
         case 7:
             cout << "Exiting program..." << endl;
+            cout << "This code is implemented by Abhyudai Gupta " << endl;
             break;
 
         default:

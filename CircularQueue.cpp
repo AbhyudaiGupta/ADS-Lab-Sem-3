@@ -8,15 +8,15 @@ public:
     int front, rear;
     void initialize()
     {
-        front=rear=-1;
+        front = rear = -1;
     }
     bool isEmpty()
     {
-        return front==-1;
+        return front == -1;
     }
     bool isFull()
     {
-        return (rear+1)%SIZE==front;
+        return (rear + 1) % SIZE == front;
     }
     void enqueue(int info)
     {
@@ -25,9 +25,9 @@ public:
             cout << "Queue is full" << endl;
             return;
         }
-        if (front==-1)
-            front=0;
-        rear=(rear+1)%SIZE;
+        if (front == -1)
+            front = 0;
+        rear = (rear + 1) % SIZE;
         data[rear] = info;
     }
     int dequeue()
@@ -35,30 +35,31 @@ public:
         int item;
         if (front == -1)
         {
-            cout<<endl<< "Queue is empty" << endl;
+            cout << endl
+                 << "Queue is empty" << endl;
             return -1;
         }
-        item=data[front];
-        if (front==rear)
-            front=rear= -1;
+        item = data[front];
+        if (front == rear)
+            front = rear = -1;
         else
-            front=(front+1)%SIZE;
+            front = (front + 1) % SIZE;
         return item;
     }
     void traverse()
     {
         if (isEmpty())
         {
-            cout<<"Queue is Empty"<<endl;
+            cout << "Queue is Empty" << endl;
             return;
         }
-        int i=front;
-        while (i!=(rear))
+        int i = front;
+        while (i != (rear))
         {
-            cout<<data[i]<<" ";
-            i = (i+1)%SIZE;
+            cout << data[i] << " ";
+            i = (i + 1) % SIZE;
         }
-        cout<<data[i]<<" ";
+        cout << data[i] << " ";
         cout << endl;
     }
 };
@@ -81,28 +82,29 @@ int main()
         {
         case 1:
             cout << "Enter info: ";
-            cin>>info;
+            cin >> info;
             Q.enqueue(info);
-            cout<<"Front = "<<Q.front<< ", Rear = "<< Q.rear<< endl;
+            cout << "Front = " << Q.front << ", Rear = " << Q.rear << endl;
             break;
         case 2:
             info = Q.dequeue();
             if (info != -1)
-                cout<<"Removed Element: " << info;
-             cout<<"Front = "<<Q.front<< ", Rear = "<< Q.rear<< endl;
+                cout << "Removed Element: " << info;
+            cout << "Front = " << Q.front << ", Rear = " << Q.rear << endl;
             break;
         case 3:
             Q.traverse();
-            cout <<"Front = "<<Q.front<< ", Rear = "<< Q.rear<< endl;
+            cout << "Front = " << Q.front << ", Rear = " << Q.rear << endl;
             break;
         case 4:
-            cout << "The queue is "<<(Q.isEmpty()?"Empty":"Not Empty") << endl;
+            cout << "The queue is " << (Q.isEmpty() ? "Empty" : "Not Empty") << endl;
             break;
         case 5:
-            cout << "The queue is "<<(Q.isFull()?"Full":"Not Full") << endl;
+            cout << "The queue is " << (Q.isFull() ? "Full" : "Not Full") << endl;
             break;
         case 6:
-            cout << endl << "This code is executed by Mr. XYZ with Roll No XXXXXX" << endl;
+            cout << endl
+                 << "This code is executed by Abhyudai Gupta with Roll No 2503201000056" << endl;
             break;
         default:
             cout << "Invalid Choice! Try again" << endl;

@@ -177,6 +177,7 @@ int main()
 
         case 6:
             cout << "Exiting program...\n";
+            cout << "This code is implemented by Abhyudai Gupta " << endl;
             break;
 
         default:
@@ -184,6 +185,4 @@ int main()
         }
 
     } while (choice != 6);
-
-    return 0;
 }

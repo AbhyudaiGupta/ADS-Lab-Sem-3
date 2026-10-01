@@ -30,4 +30,5 @@ int main()
     {
         cout << str << " is not a palindrome." << endl;
     }
+    cout << "This code is implemented by Abhyudai Gupta " << endl;
 }

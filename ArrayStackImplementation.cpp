@@ -92,6 +92,7 @@ int main()
         case 4:
         {
             cout << "Exit" << endl;
+            cout << "This code is implemented by Abhyudai Gupta " << endl;
             break;
         }
         default:
@@ -100,6 +101,4 @@ int main()
         }
         }
     } while (ch != 4);
-
-    return 0;
 }

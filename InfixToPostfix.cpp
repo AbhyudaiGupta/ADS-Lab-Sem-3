@@ -63,4 +63,6 @@ int main()
         s.pop();
     }
     cout << "Postfix expression : " << P << endl;
+
+    cout << "This code is implemented by Abhyudai Gupta " << endl;
 }

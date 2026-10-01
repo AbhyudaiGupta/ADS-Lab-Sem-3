@@ -69,5 +69,5 @@ int main()
     Pop(top);
     traverse(top);
 
-    return 0;
+    cout << "This code is implemented by Abhyudai Gupta " << endl;
 }

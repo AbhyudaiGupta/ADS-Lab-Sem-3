@@ -7,11 +7,11 @@ private:
     struct Node
     {
         int data;
-        Node* next;
+        Node *next;
     };
 
-    Node* front;
-    Node* rear;
+    Node *front;
+    Node *rear;
 
 public:
     // Constructor
@@ -30,7 +30,7 @@ public:
     // Insert element
     void enqueue(int value)
     {
-        Node* newNode = new Node;
+        Node *newNode = new Node;
 
         newNode->data = value;
         newNode->next = NULL;
@@ -57,7 +57,7 @@ public:
             return;
         }
 
-        Node* temp = front;
+        Node *temp = front;
 
         cout << "Removed element: " << front->data << endl;
 
@@ -80,7 +80,7 @@ public:
             return;
         }
 
-        Node* temp = front;
+        Node *temp = front;
 
         cout << "Queue elements: ";
 
@@ -164,6 +164,7 @@ int main()
 
         case 7:
             cout << "Exiting program..." << endl;
+            cout << "This code is implemented by Abhyudai Gupta " << endl;
             break;
 
         default:

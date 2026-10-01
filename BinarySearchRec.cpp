@@ -30,7 +30,7 @@ int main()
         return 0;
     }
 
-    int* arr = new int[n];
+    int *arr = new int[n];
 
     cout << "Enter " << n << " elements in sorted order: ";
 
@@ -52,5 +52,5 @@ int main()
 
     delete[] arr;
 
-    return 0;
+    cout << "This code is implemented by Abhyudai Gupta " << endl;
 }

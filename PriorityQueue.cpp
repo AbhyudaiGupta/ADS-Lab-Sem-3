@@ -3,7 +3,8 @@ using namespace std;
 
 const int MAX = 100;
 
-struct Node {
+struct Node
+{
     int data;
     int priority;
 };
@@ -11,23 +12,29 @@ struct Node {
 Node pq[MAX];
 int n = 0;
 
-void array_insert(int i, Node x) {
-    for (int j = n - 1; j >= i; j--) {
+void array_insert(int i, Node x)
+{
+    for (int j = n - 1; j >= i; j--)
+    {
         pq[j + 1] = pq[j];
     }
     pq[i] = x;
 }
 
-Node array_delete(int i) {
+Node array_delete(int i)
+{
     Node val = pq[i];
-    for (int j = i; j < n - 1; j++) {
+    for (int j = i; j < n - 1; j++)
+    {
         pq[j] = pq[j + 1];
     }
     return val;
 }
 
-void enqueue(int data, int P) {
-    if (n == MAX) {
+void enqueue(int data, int P)
+{
+    if (n == MAX)
+    {
         cout << "Priority Queue is Full!" << endl;
         return;
     }
@@ -37,15 +44,18 @@ void enqueue(int data, int P) {
     x.priority = P;
 
     int i = 0;
-    while (i < n && P <= pq[i].priority) {
+    while (i < n && P <= pq[i].priority)
+    {
         i++;
     }
     array_insert(i, x);
     n++;
 }
 
-Node dequeue() {
-    if (n == 0) {
+Node dequeue()
+{
+    if (n == 0)
+    {
         cout << "Priority Queue is Empty!" << endl;
         Node empty = {-1, -1};
         return empty;
@@ -55,14 +65,17 @@ Node dequeue() {
     return val;
 }
 
-void display() {
+void display()
+{
     cout << "Data\tPriority" << endl;
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         cout << pq[i].data << "\t" << pq[i].priority << endl;
     }
 }
 
-int main() {
+int main()
+{
     enqueue(10, 2);
     enqueue(20, 5);
     enqueue(30, 5);
@@ -70,7 +83,7 @@ int main() {
     enqueue(50, 3);
 
     display();
-    
+
     cout << endl;
     Node d;
     d = dequeue();
@@ -81,5 +94,5 @@ int main() {
     cout << endl;
     display();
 
-    return 0;
+    cout << "This code is implemented by Abhyudai Gupta " << endl;
 }
